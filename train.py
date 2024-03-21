@@ -8,6 +8,7 @@ from copy import deepcopy
 from pathlib import Path
 from threading import Thread
 
+from torchsummary import summary
 import numpy as np
 import torch.distributed as dist
 import torch.nn as nn
@@ -433,6 +434,10 @@ def train(hyp, opt, device, tb_writer=None):
     for epoch in range(
         start_epoch, epochs
     ):  # epoch ------------------------------------------------------------------
+        input_size = (3, 640, 640)
+        txt = summary(model, verbose=0, input_size=input_size)
+        with open("model.txt", "w") as f:
+            f.write(str(txt))  # write model summary to file
         model.train()
 
         # Update image weights (optional)

@@ -1,0 +1,2 @@
+0.000001 for ilr for batch 1
+ilr * 0.1 for flr
