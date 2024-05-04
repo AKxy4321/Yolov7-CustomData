@@ -23,6 +23,8 @@
 !setup.cfg
 !cfg/yolov3*.cfg
 
+data/custom/
+data/custom_split/
 storage.googleapis.com
 model.txt
 **/*_split/
