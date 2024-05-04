@@ -1,10 +1,9 @@
 # train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
-train: ./data/pothole_split/train
-val: ./data/pothole_split/validation
-test: ./data/pothole_split/test
+train: ./data/data_split/train
+val: ./data/data_split/validation
+test: ./data/data_split/test
 
 # number of classes
-nc: 1
+nc: 6
+names: ['barricade', 'garbage_pile', 'light_pole', 'pothole-ditch', 'roadside_stall', 'vehicle']
 
-# class names
-names: [ 'pothole' ]

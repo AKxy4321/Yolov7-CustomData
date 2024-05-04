@@ -1,7 +1,7 @@
 import os
 from sklearn.model_selection import train_test_split
 
-dataset = "pothole"
+dataset = "custom"
 # Read images and annotations
 images = [os.path.join(f"{dataset}/images", x) for x in os.listdir(f"{dataset}/images")]
 annotations = [
@@ -15,7 +15,7 @@ annotations.sort()
 
 # Split the dataset into train-valid-test splits
 train_images, val_images, train_annotations, val_annotations = train_test_split(
-    images, annotations, test_size=0.3, random_state=1
+    images, annotations, test_size=0.2, random_state=1
 )
 val_images, test_images, val_annotations, test_annotations = train_test_split(
     val_images, val_annotations, test_size=0.5, random_state=1
@@ -24,7 +24,7 @@ val_images, test_images, val_annotations, test_annotations = train_test_split(
 import shutil
 
 # Define directories for train, validation, and test splits
-dataset = "pothole_split"
+dataset = "custom_split"
 train_dir = f"./{dataset}/train"
 val_dir = f"./{dataset}/validation"
 test_dir = f"./{dataset}/test"
