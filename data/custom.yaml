@@ -1,7 +1,7 @@
 # train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
-train: ./data/data_split/train
-val: ./data/data_split/validation
-test: ./data/data_split/test
+train: ./data/custom_split/train
+val: ./data/custom_split/validation
+test: ./data/custom_split/test
 
 # number of classes
 nc: 6
