@@ -888,7 +888,7 @@ if __name__ == "__main__":
         "--freeze",
         nargs="+",
         type=int,
-        default=[89],
+        default=[0],
         help="Freeze layers: backbone of yolov7=50, first3=0 1 2",
     )
     parser.add_argument(
