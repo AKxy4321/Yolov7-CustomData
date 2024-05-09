@@ -8,7 +8,7 @@ from copy import deepcopy
 from pathlib import Path
 from threading import Thread
 
-from torchsummary import summary
+# from torchsummary import summary
 import numpy as np
 import torch.distributed as dist
 import torch.nn as nn
